@@ -1,5 +1,5 @@
 body {
-    color: #333333;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 650px;
     margin: 0 auto;
@@ -15,8 +15,8 @@ body {
 }
 
 footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
+    color: white;
+    border-top: 1px solid black;
     margin-top: 16px;
     padding: 16px 0;
 }
@@ -32,7 +32,7 @@ h1 {
 }
 
 header a {
-    color: #888888;
+    color: white;
     margin-right: 16px;
     text-decoration: none;
 }
@@ -40,6 +40,12 @@ header a {
 .portrait {
     width: 250px;
     border: 2px solid black;
+}
+
+.left {
+        float: left;
+        width: 90px;
+        padding: 10px;
 }
 
 input {

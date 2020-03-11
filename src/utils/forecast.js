@@ -11,8 +11,12 @@ const forecast = (latitude, longitude, callback) => {
         }
         else{
             callback(undefined, {
-                summary: response.body.daily.summary,
-                temperature: response.body.currently.temperature
+                dailySummary: response.body.daily.data[0].summary,
+                dailyTemperature: response.body.daily.temperature,
+                currTemperature: response.body.currently.temperature,
+                currSummary: response.body.currently.summary,
+                dailyPrecipType: response.body.daily.data[0].precipType,
+                dailyPrecipProbability: response.body.daily.data[0].precipProbability
             })
         }
     })

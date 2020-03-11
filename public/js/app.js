@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", (e) => {
     const url = '/weather?address=' + location
 
     messageOne.textContent = 'Loading...'
-    messageTwo.textContent = ''
+    messageTwo.textContent = 'Think happy thoughts till then!'
     fetch(url).then((response) => {
         response.json().then((data) => {
             if(data.error){
@@ -23,7 +23,7 @@ weatherForm.addEventListener("submit", (e) => {
             }
             else{
                 messageOne.textContent = data.locationString
-                messageTwo.textContent = data.forecast
+                messageTwo.textContent = data.dailySummary + " The temperature currently is " + data.currTemperature + "℃. It is going to be a " + data.currSummary.toLowerCase() + " day today." + " There is " + data.dailyPrecipProbability + "% chance of " + data.dailyPrecipType + " today."
             }
         })
     })

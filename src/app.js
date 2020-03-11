@@ -57,9 +57,14 @@ app.get('/weather', (req,res) => {
                 return res.send({ error })
             }
             res.send({
-                forecast: forecastData.summary,
+                dailySummary: forecastData.dailySummary,
                 locationString: location,
-                address: req.query.address
+                address: req.query.address,
+                dailyTemperature: forecastData.dailyTemperature,
+                currTemperature: forecastData.currTemperature,
+                currSummary: forecastData.currSummary,
+                dailyPrecipType: forecastData.dailyPrecipType,
+                dailyPrecipProbability: forecastData.dailyPrecipProbability
             })
         })
     })
