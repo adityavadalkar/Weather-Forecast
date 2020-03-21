@@ -10,6 +10,10 @@ body {
     min-height: 100vh;
 }
 
+a{
+    color: lightblue;
+}
+
 .main-content {
     flex-grow: 1;
 }
